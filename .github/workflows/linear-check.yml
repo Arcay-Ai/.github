@@ -7,6 +7,8 @@ on:
 
 jobs:
   linear-key:
+    # Dependabot and other bots never have a Linear key, so skip them.
+    if: ${{ !endsWith(github.actor, '[bot]') }}
     runs-on: ubuntu-latest
     steps:
       - name: Look for a Linear key in PR title or branch
