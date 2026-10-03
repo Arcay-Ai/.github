@@ -1,0 +1,22 @@
+# Reusable workflow: fails a pull request that has no Linear ARC key
+# in its title or branch name. Called from each repo's CI.
+name: Linear issue check
+
+on:
+  workflow_call:
+
+jobs:
+  linear-key:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Look for ARC-### in PR title or branch
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BRANCH: ${{ github.head_ref }}
+        run: |
+          if printf '%s %s' "$PR_TITLE" "$PR_BRANCH" | grep -qiE 'arc-[0-9]+'; then
+            echo "Linear issue key found."
+          else
+            echo "::error::Add the Linear issue key (e.g. ARC-59) to the PR title or branch name."
+            exit 1
+          fi

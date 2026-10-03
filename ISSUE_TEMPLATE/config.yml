@@ -1,0 +1,9 @@
+# Arcay Studio tracks work in Linear, not GitHub Issues.
+blank_issues_enabled: false
+contact_links:
+  - name: Create a task in Linear
+    url: https://linear.app
+    about: All bugs, features and tasks go into Linear (ARC team).
+  - name: Report a security problem
+    url: https://github.com/Arcay-Ai/.github/blob/main/SECURITY.md
+    about: Please do not report security issues publicly.

@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [ $default-branch ]
+
+jobs:
+  linear:
+    if: github.event_name == 'pull_request'
+    uses: Arcay-Ai/.github/.github/workflows/linear-check.yml@main
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test
+        run: echo "Replace with this project's build and test commands"
