@@ -1,5 +1,5 @@
 {
-  "name": "Arcay Studio CI",
+  "name": "Arcay AI CI",
   "description": "Standard CI with the Linear issue key check.",
   "iconName": "octicon check-circle",
   "categories": ["Automation"]

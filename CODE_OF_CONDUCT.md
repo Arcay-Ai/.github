@@ -1,6 +1,6 @@
 # Code of conduct
 
-We want Arcay Studio to be a respectful place to work for everyone.
+We want Arcay AI to be a respectful place to work for everyone.
 
 - Be respectful and constructive, especially in code review. Critique the code, not the person.
 - Assume good intent, and ask before assuming.

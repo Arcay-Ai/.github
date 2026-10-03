@@ -1,6 +1,6 @@
 # Security policy
 
-If you find a security vulnerability in any Arcay Studio repository, **do not open a public issue or pull request**.
+If you find a security vulnerability in any Arcay AI repository, **do not open a public issue or pull request**.
 
 Email **support@tryarcay.ai** with:
 - the affected repository and file or URL

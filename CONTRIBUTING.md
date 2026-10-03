@@ -1,4 +1,4 @@
-# Contributing at Arcay Studio
+# Contributing at Arcay AI
 
 ## 1. Start from a Linear issue
 Every change starts with a Linear issue (for example `ALS-59`). If there isn't one, create it first.

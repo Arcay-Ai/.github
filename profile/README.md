@@ -1,4 +1,4 @@
-# Arcay Studio
+# Arcay AI
 
 We design and build software for our clients, with a focus on secure, region-aware cloud deployments.
 
