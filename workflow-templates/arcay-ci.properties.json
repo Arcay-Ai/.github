@@ -1,6 +1,6 @@
 {
   "name": "Arcay Studio CI",
-  "description": "Standard CI with the Linear ARC issue check.",
+  "description": "Standard CI with the Linear issue key check.",
   "iconName": "octicon check-circle",
   "categories": ["Automation"]
 }

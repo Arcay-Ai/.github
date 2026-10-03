@@ -1,5 +1,5 @@
-# Reusable workflow: fails a pull request that has no Linear ARC key
-# in its title or branch name. Called from each repo's CI.
+# Reusable workflow: fails a pull request that has no Linear issue key
+# (any team, e.g. ALS-82) in its title or branch name. Called from each repo's CI.
 name: Linear issue check
 
 on:
@@ -9,14 +9,17 @@ jobs:
   linear-key:
     runs-on: ubuntu-latest
     steps:
-      - name: Look for ARC-### in PR title or branch
+      - name: Look for a Linear key in PR title or branch
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
           PR_BRANCH: ${{ github.head_ref }}
         run: |
-          if printf '%s %s' "$PR_TITLE" "$PR_BRANCH" | grep -qiE 'arc-[0-9]+'; then
+          # Title: an uppercase key such as ALS-82 anywhere.
+          # Branch: Linear's format, e.g. name/als-82-short-title or als-82-short-title.
+          if printf '%s' "$PR_TITLE" | grep -qE '(^|[^A-Za-z0-9])[A-Z][A-Z0-9]{1,6}-[0-9]+' \
+             || printf '%s' "$PR_BRANCH" | grep -qiE '(^|/)[a-z][a-z0-9]{1,6}-[0-9]+(-|$)'; then
             echo "Linear issue key found."
           else
-            echo "::error::Add the Linear issue key (e.g. ARC-59) to the PR title or branch name."
+            echo "::error::Add the Linear issue key (e.g. ALS-82) to the PR title, or use the branch name Linear suggests (name/als-82-short-title)."
             exit 1
           fi

@@ -7,7 +7,7 @@ We design and build software for our clients, with a focus on secure, region-awa
 | What | Where |
 |---|---|
 | Code | Repositories in this organization |
-| Planning and tasks | Linear (issue keys look like `ARC-123`) |
+| Planning and tasks | Linear (issue keys look like `ALS-123`) |
 | Architecture decisions | `docs/adr/` inside each repository |
 
 ## Starting a new project
