@@ -33,6 +33,7 @@ review on their own.
 - blockers and issues (`path:line`, the problem, the fix);
 - a Done-when checklist;
 - merge risk;
+- suggestions from experience (simpler designs, better patterns, pitfalls), none of them blocking;
 - questions for the author.
 
 It never approves or blocks.
