@@ -1,0 +1,6 @@
+{
+  "name": "Claude review",
+  "description": "Claude reviews a pull request against its Linear issue when someone comments @claude review.",
+  "iconName": "octicon code-review",
+  "categories": ["Automation"]
+}
